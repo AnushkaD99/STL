@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Menu } from 'antd';
-import { HomeOutlined, LogoutOutlined } from '@ant-design/icons';
+import { HomeOutlined, LogoutOutlined, FileOutlined } from '@ant-design/icons';
 
 const Sidebar = () => {
   const handleLogout = () => {
@@ -15,7 +15,10 @@ const Sidebar = () => {
       <Menu.Item key="1" icon={<HomeOutlined />}>
         <Link to="/dashboard">Dashboard</Link>
       </Menu.Item>
-      <Menu.Item key="2" icon={<LogoutOutlined />}>
+      <Menu.Item key="2" icon={<FileOutlined />}>
+        <Link to="/Billing">Bill Details</Link>
+      </Menu.Item>
+      <Menu.Item key="3" icon={<LogoutOutlined />}>
         <Link onClick={handleLogout}>Logout</Link>
       </Menu.Item>
     </Menu>
